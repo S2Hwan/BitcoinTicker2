@@ -13,6 +13,7 @@
 		54CE79DE20B6DCCD00A9F4BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CE79DC20B6DCCD00A9F4BD /* Main.storyboard */; };
 		54CE79E020B6DCCE00A9F4BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54CE79DF20B6DCCE00A9F4BD /* Assets.xcassets */; };
 		54CE79E320B6DCCE00A9F4BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CE79E120B6DCCE00A9F4BD /* LaunchScreen.storyboard */; };
+		54CE79ED20B6F39500A9F4BD /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE79EC20B6F39500A9F4BD /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		54CE79DF20B6DCCE00A9F4BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54CE79E220B6DCCE00A9F4BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54CE79E420B6DCCE00A9F4BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54CE79EC20B6F39500A9F4BD /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		C3B96E55355F06E6A4E1B00C /* Pods_BitcoinTicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinTicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEADBE1030CDED19917C7923 /* Pods-BitcoinTicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinTicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinTicker/Pods-BitcoinTicker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +77,7 @@
 				54CE79DF20B6DCCE00A9F4BD /* Assets.xcassets */,
 				54CE79E120B6DCCE00A9F4BD /* LaunchScreen.storyboard */,
 				54CE79E420B6DCCE00A9F4BD /* Info.plist */,
+				54CE79EC20B6F39500A9F4BD /* CustomTableViewCell.swift */,
 			);
 			path = BitcoinTicker;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54CE79ED20B6F39500A9F4BD /* CustomTableViewCell.swift in Sources */,
 				54CE79DB20B6DCCD00A9F4BD /* ViewController.swift in Sources */,
 				54CE79D920B6DCCD00A9F4BD /* AppDelegate.swift in Sources */,
 			);
@@ -367,7 +371,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5W9SHGAJVE;
 				INFOPLIST_FILE = BitcoinTicker/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ssh.BitcoinTicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -383,7 +390,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5W9SHGAJVE;
 				INFOPLIST_FILE = BitcoinTicker/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ssh.BitcoinTicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
