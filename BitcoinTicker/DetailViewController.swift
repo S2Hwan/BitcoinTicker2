@@ -27,6 +27,7 @@ class DetailViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBOutlet weak var coinIcon: UIImageView!
     @IBOutlet weak var coinName: UILabel!
     @IBOutlet weak var detailPicker: UIPickerView!
+    @IBOutlet weak var currencyLabel: UILabel!
     
     var data : Data?
     
@@ -96,7 +97,7 @@ class DetailViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         
         let bitcoinResult = json["data"]["opening_price"].intValue
         
-        coinName.text = String(bitcoinResult)
+        currencyLabel.text = String(bitcoinResult)
         
     }
     

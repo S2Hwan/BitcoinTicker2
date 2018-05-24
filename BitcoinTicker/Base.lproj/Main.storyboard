@@ -112,6 +112,13 @@
                                 <rect key="frame" x="107" y="100" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ns5-t6-iyY">
+                                <rect key="frame" x="154" y="442" width="106" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Nly-Vo-pqu"/>
@@ -119,6 +126,7 @@
                     <connections>
                         <outlet property="coinIcon" destination="UYV-KT-hMe" id="WzH-kz-wlk"/>
                         <outlet property="coinName" destination="aPz-ER-bGA" id="obR-bg-Jew"/>
+                        <outlet property="currencyLabel" destination="Ns5-t6-iyY" id="2w1-5O-Nze"/>
                         <outlet property="detailPicker" destination="vdL-LZ-het" id="GMJ-Bw-daM"/>
                     </connections>
                 </viewController>
