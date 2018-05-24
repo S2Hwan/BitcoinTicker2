@@ -15,6 +15,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
    
+    @IBOutlet weak var tableView: UITableView!
+    
     
     
     
@@ -22,11 +24,32 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     let bitCoinArray = ["BTC", "ETH", "DASH", "LTC", "ETC", "XRP", "BCH", "XMR", "ZEC", "QTUM", "BTG", "EOS", "ICX", "VEN", "TRX", "ELF", "MITH", "MCO", "OMG", "KNC", "GNT", "HSR", "ZIL", "ETHOS", "PAY", "WAX", "POWR", "LRC", "GTO", "STEEM", "STRAT"]
     
-    var finalURL = ""
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
        
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return bitCoinArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! CustomTableViewCell
+        
+        cell.coinName.text = bitCoinArray[indexPath.row]
+        cell.iconImage.image = UIImage(named: bitCoinArray[indexPath.row])
+        cell.iconImage.layer.cornerRadius = cell.cellView.frame.height / 2
+        
+        return cell
     }
 
 
