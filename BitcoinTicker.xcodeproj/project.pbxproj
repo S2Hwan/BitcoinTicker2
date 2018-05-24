@@ -15,6 +15,7 @@
 		54CE79E320B6DCCE00A9F4BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CE79E120B6DCCE00A9F4BD /* LaunchScreen.storyboard */; };
 		54CE79ED20B6F39500A9F4BD /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE79EC20B6F39500A9F4BD /* CustomTableViewCell.swift */; };
 		54CE79EF20B6FBF300A9F4BD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE79EE20B6FBF300A9F4BD /* DetailViewController.swift */; };
+		54CE79FB20B719BF00A9F4BD /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE79FA20B719BF00A9F4BD /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		54CE79E420B6DCCE00A9F4BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54CE79EC20B6F39500A9F4BD /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		54CE79EE20B6FBF300A9F4BD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		54CE79FA20B719BF00A9F4BD /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		C3B96E55355F06E6A4E1B00C /* Pods_BitcoinTicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinTicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEADBE1030CDED19917C7923 /* Pods-BitcoinTicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinTicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinTicker/Pods-BitcoinTicker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +83,7 @@
 				54CE79E420B6DCCE00A9F4BD /* Info.plist */,
 				54CE79EC20B6F39500A9F4BD /* CustomTableViewCell.swift */,
 				54CE79EE20B6FBF300A9F4BD /* DetailViewController.swift */,
+				54CE79FA20B719BF00A9F4BD /* Data.swift */,
 			);
 			path = BitcoinTicker;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54CE79ED20B6F39500A9F4BD /* CustomTableViewCell.swift in Sources */,
+				54CE79FB20B719BF00A9F4BD /* Data.swift in Sources */,
 				54CE79DB20B6DCCD00A9F4BD /* ViewController.swift in Sources */,
 				54CE79D920B6DCCD00A9F4BD /* AppDelegate.swift in Sources */,
 				54CE79EF20B6FBF300A9F4BD /* DetailViewController.swift in Sources */,
