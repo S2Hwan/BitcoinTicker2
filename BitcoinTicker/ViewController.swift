@@ -21,11 +21,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
    
-//    let bitCoinURL = "https://api.bithumb.com/public/ticker/"
+    let bitCoinURL = "https://api.bithumb.com/public/ticker/"
 //
    let bitCoinArray = ["BTC", "ETH", "DASH", "LTC", "ETC", "XRP", "BCH", "XMR", "ZEC", "QTUM", "BTG", "EOS", "ICX", "VEN", "TRX", "ELF", "MITH", "MCO", "OMG", "KNC", "GNT", "HSR", "ZIL", "ETHOS", "PAY", "WAX", "POWR", "LRC", "GTO", "STEEM", "STRAT"]
 //
-//    var finalURL = ""
+    var finalURL = ""
   
    
     @IBOutlet weak var tableView: UITableView!
@@ -69,11 +69,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         myIndex = indexPath.row
         performSegue(withIdentifier: "goToDetailVC", sender: self)
         
-        
-        
-//        finalURL = bitCoinURL + bitCoinArray[indexPath.row]
-//        print(finalURL)
-       // getBitcoinData(url: finalURL)
+        finalURL = bitCoinURL + bitCoinArray[indexPath.row]
+        print(finalURL)
+        getBitcoinData(url: finalURL)
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -81,40 +79,38 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //            destination.data = data[(tableView.indexPathForSelectedRow?.row)!]
 //        }
 //    }
+//
     
     
     
     
-    
-//    //MARK: - Networking
-//    /***************************************************************/
-//    func getBitcoinData(url: String) {
-//
-//        Alamofire.request(url, method: .get).responseJSON { (response) in
-//            if response.result.isSuccess {
-//                print("Success")
-//                let bitcoinJSON : JSON = JSON(response.result.value)
-//
-//                self.updateBitcoinData(json: bitcoinJSON)
-//
-//            } else {
-//                print("Error: \(String(describing: response.result.value))")
-//
-//            }
-//        }
-//
-//
-//    }
-//    /***************************************************************/
-//    //MARK: - JSON Parsing
-//
-//    func updateBitcoinData(json : JSON) {
-//
-//        let bitcoinResult = json["data"]["opening_price"].intValue
-//
-//
-//
-//    }
+    //MARK: - Networking
+    /***************************************************************/
+    func getBitcoinData(url: String) {
+
+        Alamofire.request(url, method: .get).responseJSON { (response) in
+            if response.result.isSuccess {
+                print("Success")
+                let bitcoinJSON : JSON = JSON(response.result.value)
+
+                self.updateBitcoinData(json: bitcoinJSON)
+
+            } else {
+                print("Error: \(String(describing: response.result.value))")
+
+            }
+        }
+    }
+    /***************************************************************/
+    //MARK: - JSON Parsing
+
+    func updateBitcoinData(json : JSON) {
+
+        let bitcoinResult = json["data"].intValue
+
+
+
+    }
     
     
     
