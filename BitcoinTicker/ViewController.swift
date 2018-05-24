@@ -10,6 +10,11 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+var coinData = ["BTC", "ETH", "DASH", "LTC", "ETC", "XRP", "BCH", "XMR", "ZEC", "QTUM", "BTG", "EOS", "ICX", "VEN", "TRX", "ELF", "MITH", "MCO", "OMG", "KNC", "GNT", "HSR", "ZIL", "ETHOS", "PAY", "WAX", "POWR", "LRC", "GTO", "STEEM", "STRAT"]
+
+var myIndex = 0
+
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
@@ -21,20 +26,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
    let bitCoinArray = ["BTC", "ETH", "DASH", "LTC", "ETC", "XRP", "BCH", "XMR", "ZEC", "QTUM", "BTG", "EOS", "ICX", "VEN", "TRX", "ELF", "MITH", "MCO", "OMG", "KNC", "GNT", "HSR", "ZIL", "ETHOS", "PAY", "WAX", "POWR", "LRC", "GTO", "STEEM", "STRAT"]
 //
 //    var finalURL = ""
-    
+  
    
     @IBOutlet weak var tableView: UITableView!
+    
+    //var data = [Data]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+// 
+//        let india = Data(coinName: "BTC")
+//        data.append(india)
+        
+        
        
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bitCoinArray.count
+        return coinData.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -43,15 +55,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! CustomTableViewCell
-        cell.coinName.text = bitCoinArray[indexPath.row]
-        cell.iconImage.image = UIImage(named: bitCoinArray[indexPath.row])
+        cell.coinName.text = coinData[indexPath.row]
+        cell.iconImage.image = UIImage(named: coinData[indexPath.row])
         cell.iconImage.layer.cornerRadius = cell.cellView.frame.height / 2
         
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
         performSegue(withIdentifier: "goToDetailVC", sender: self)
         
         
@@ -60,6 +75,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //        print(finalURL)
        // getBitcoinData(url: finalURL)
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let destination = segue.destination as? DetailViewController {
+//            destination.data = data[(tableView.indexPathForSelectedRow?.row)!]
+//        }
+//    }
+    
+    
+    
     
     
 //    //MARK: - Networking

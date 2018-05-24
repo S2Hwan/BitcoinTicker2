@@ -28,21 +28,22 @@ class DetailViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBOutlet weak var coinName: UILabel!
     @IBOutlet weak var detailPicker: UIPickerView!
     
+    var data : Data?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         detailPicker.delegate = self
         detailPicker.dataSource = self
-        
+//        
+//        coinName.text = data?.bitcoinName
+//        coinIcon.image = data?.coinIconimage
+//
+        coinName.text = coinData[myIndex]
+        coinIcon.image = UIImage(named: coinData[myIndex])
         
             
-//            tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! CustomTableViewCell
-//        cell.coinName.text = bitCoinArray[indexPath.row]
-//        cell.iconImage.image = UIImage(named: bitCoinArray[indexPath.row])
-//        cell.iconImage.layer.cornerRadius = cell.cellView.frame.height / 2
-//
-//        return cell
-//
+
         
     }
     
@@ -96,8 +97,6 @@ class DetailViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         let bitcoinResult = json["data"]["opening_price"].intValue
         
         coinName.text = String(bitcoinResult)
-        
-        
         
     }
     
