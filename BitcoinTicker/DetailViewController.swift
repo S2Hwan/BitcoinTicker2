@@ -14,9 +14,10 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var coinIcon: UIImageView!
     @IBOutlet weak var coinName: UILabel!
-    @IBOutlet weak var maxLabel: UILabel!
     @IBOutlet weak var minLabel: UILabel!
     @IBOutlet weak var avgLabel: UILabel!
+    @IBOutlet weak var maxLabel: UILabel!
+    @IBOutlet weak var rateLabel: UILabel!
     @IBOutlet weak var ratePriceLabel: UILabel!
     
     let bitCoinURL = "https://api.bithumb.com/public/ticker/"
@@ -24,12 +25,15 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        coinName.text = coinData[myIndex]
+        coinName.text = bitCoin[myIndex]
         coinIcon.image = UIImage(named: coinData[myIndex])
         
-        getMaxBitcoinData(url: bitCoinURL + coinData[myIndex])
-        getMinBitcoinData(url: bitCoinURL + coinData[myIndex])
        
+        
+        
+       
+        
+        getBitcoinData(url: bitCoinURL + coinData[myIndex])
     
     }
     
@@ -37,10 +41,11 @@ class DetailViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+
     
 //    MARK: - Networking
 //    *************************************************************
-    func getMaxBitcoinData(url: String) {
+    func getBitcoinData(url: String) {
 
         Alamofire.request(url, method: .get).responseJSON { (response) in
             if response.result.isSuccess {
@@ -49,7 +54,8 @@ class DetailViewController: UIViewController {
 
                 let bitcoinJSON : JSON = JSON(response.result.value as Any)
 
-                self.maxBitCoinData(json: bitcoinJSON)
+                //self.maxBitCoinData(json: bitcoinJSON)
+                self.updateBitCoinData(json: bitcoinJSON)
                 
                 //print(bitcoinJSON)
 
@@ -59,48 +65,23 @@ class DetailViewController: UIViewController {
             }
         }
     }
-
-    func getMinBitcoinData(url: String) {
-        
-        Alamofire.request(url, method: .get).responseJSON { (response) in
-            if response.result.isSuccess {
-                
-                print("Success")
-                
-                let bitcoinJSON : JSON = JSON(response.result.value as Any)
-                
-                self.minBitCoinData(json: bitcoinJSON)
-                
-                //print(bitcoinJSON)
-                
-            } else {
-                print("Error: \(String(describing: response.result.value))")
-                
-            }
-        }
-    }
-
     /***************************************************************/
     //MARK: - JSON Parsing
-
-    func maxBitCoinData(json : JSON) {
+    func updateBitCoinData(json : JSON) {
+        
         let maxData = json["data"]["max_price"].intValue
-        maxLabel.text = String(maxData) + " 원"
-    }
-
-    func minBitCoinData(json : JSON) {
         let minData = json["data"]["min_price"].intValue
-        minLabel.text = String(minData) + " 원"
-    }
-    
-    func avgBitCoinData(json : JSON) {
         let avgData = json["data"]["average_price"].intValue
-        avgLabel.text = String(avgData)
-    }
-    
-    func ratePriceBitCoinData(json : JSON) {
         let ratePriceData = json["data"]["24H_fluctate"].intValue
-        ratePriceLabel.text = String(ratePriceData)
+        let rateData = json["data"]["24H_fluctate_rate"].doubleValue
+         
+        
+        maxLabel.text = String(maxData) + " 원"
+        minLabel.text = String(minData) + " 원"
+        avgLabel.text = String(avgData) + " 원"
+        rateLabel.text = String(ratePriceData) + " 원"
+        ratePriceLabel.text = String(rateData) + " %"
+        
     }
 }
 
