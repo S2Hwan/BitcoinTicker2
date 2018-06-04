@@ -9,27 +9,25 @@
 /* Begin PBXBuildFile section */
 		40E736B60B3EEB8DCB074833 /* Pods_BitcoinTicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B96E55355F06E6A4E1B00C /* Pods_BitcoinTicker.framework */; };
 		54CE79D920B6DCCD00A9F4BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE79D820B6DCCD00A9F4BD /* AppDelegate.swift */; };
-		54CE79DB20B6DCCD00A9F4BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE79DA20B6DCCD00A9F4BD /* ViewController.swift */; };
+		54CE79DB20B6DCCD00A9F4BD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE79DA20B6DCCD00A9F4BD /* MainViewController.swift */; };
 		54CE79DE20B6DCCD00A9F4BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CE79DC20B6DCCD00A9F4BD /* Main.storyboard */; };
 		54CE79E020B6DCCE00A9F4BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54CE79DF20B6DCCE00A9F4BD /* Assets.xcassets */; };
 		54CE79E320B6DCCE00A9F4BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CE79E120B6DCCE00A9F4BD /* LaunchScreen.storyboard */; };
 		54CE79ED20B6F39500A9F4BD /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE79EC20B6F39500A9F4BD /* CustomTableViewCell.swift */; };
 		54CE79EF20B6FBF300A9F4BD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE79EE20B6FBF300A9F4BD /* DetailViewController.swift */; };
-		54CE7A1B20B7459100A9F4BD /* currencyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE7A1A20B7459100A9F4BD /* currencyData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2EE4E21229E31C023FAC6AC6 /* Pods-BitcoinTicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinTicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinTicker/Pods-BitcoinTicker.release.xcconfig"; sourceTree = "<group>"; };
 		54CE79D520B6DCCD00A9F4BD /* BitcoinTicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitcoinTicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CE79D820B6DCCD00A9F4BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		54CE79DA20B6DCCD00A9F4BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		54CE79DA20B6DCCD00A9F4BD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		54CE79DD20B6DCCD00A9F4BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54CE79DF20B6DCCE00A9F4BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54CE79E220B6DCCE00A9F4BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54CE79E420B6DCCE00A9F4BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54CE79EC20B6F39500A9F4BD /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		54CE79EE20B6FBF300A9F4BD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		54CE7A1A20B7459100A9F4BD /* currencyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = currencyData.swift; sourceTree = "<group>"; };
 		C3B96E55355F06E6A4E1B00C /* Pods_BitcoinTicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinTicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEADBE1030CDED19917C7923 /* Pods-BitcoinTicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinTicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinTicker/Pods-BitcoinTicker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,14 +74,13 @@
 			isa = PBXGroup;
 			children = (
 				54CE79D820B6DCCD00A9F4BD /* AppDelegate.swift */,
-				54CE79DA20B6DCCD00A9F4BD /* ViewController.swift */,
+				54CE79DA20B6DCCD00A9F4BD /* MainViewController.swift */,
 				54CE79DC20B6DCCD00A9F4BD /* Main.storyboard */,
 				54CE79DF20B6DCCE00A9F4BD /* Assets.xcassets */,
 				54CE79E120B6DCCE00A9F4BD /* LaunchScreen.storyboard */,
 				54CE79E420B6DCCE00A9F4BD /* Info.plist */,
 				54CE79EC20B6F39500A9F4BD /* CustomTableViewCell.swift */,
 				54CE79EE20B6FBF300A9F4BD /* DetailViewController.swift */,
-				54CE7A1A20B7459100A9F4BD /* currencyData.swift */,
 			);
 			path = BitcoinTicker;
 			sourceTree = "<group>";
@@ -228,9 +225,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				54CE79ED20B6F39500A9F4BD /* CustomTableViewCell.swift in Sources */,
-				54CE79DB20B6DCCD00A9F4BD /* ViewController.swift in Sources */,
+				54CE79DB20B6DCCD00A9F4BD /* MainViewController.swift in Sources */,
 				54CE79D920B6DCCD00A9F4BD /* AppDelegate.swift in Sources */,
-				54CE7A1B20B7459100A9F4BD /* currencyData.swift in Sources */,
 				54CE79EF20B6FBF300A9F4BD /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
