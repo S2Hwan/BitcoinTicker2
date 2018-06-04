@@ -12,7 +12,7 @@ import SwiftyJSON
 
 
 
-class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class DetailViewController: UIViewController {
     
     let bitCoinURL = "https://api.bithumb.com/public/ticker/"
     
@@ -43,8 +43,7 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        detailPicker.delegate = self
-        detailPicker.dataSource = self
+        
 
         coinName.text = coinData[myIndex]
         coinIcon.image = UIImage(named: coinData[myIndex])
@@ -61,51 +60,7 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         self.dismiss(animated: true, completion: nil)
     }
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return indexArray.count
-
-    }
-
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return indexArray[row]
-
-    }
-
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-//        let selectedMain = coinData[row]
-        var selected = indexArray[row]
-        
-        
-//        if selectedMain == coinData[0] {
-//            selected = indexArray[0]
-//        }
-        
-        
-        
-        
-        if selected == indexArray[0] {
-            getMaxBitcoinData(url: bitCoinURL + coinData[row])
-        } else {
-            getMinBitcoinData(url: bitCoinURL + coinData[row])
-        }
-        
-//        if selected == indexArray[0] {
-//            getMaxBitcoinData(url: BTCURL)
-//        } else {
-//            getMinBitcoinData(url: BTCURL)
-//        }
-//
-      
-
-
-
-    }
-
+    
 //    MARK: - Networking
 //    *************************************************************
 
